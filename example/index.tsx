@@ -12,7 +12,7 @@ const product = {
 const App = () => {
   return (
     <div>
-      <h1>Shopping Page</h1>
+      <h1>Shopping Page Sample</h1>
       <hr />
       <div
         style={{
@@ -24,8 +24,8 @@ const App = () => {
         <ProductCard
           product={product}
           initialValues={{
-            count: 4,
-            maxCount: 10,
+            count: 1,
+            maxCount: 20,
           }}
         >
           {({ reset, count, isMaxReached, onIncreaseBy, maxCount }) => (
