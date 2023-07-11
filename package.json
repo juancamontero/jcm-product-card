@@ -1,5 +1,5 @@
 {
-  "version": "0.1.0",
+  "version": "0.0.1",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -13,7 +13,7 @@
   "scripts": {
     "start": "tsdx watch",
     "build": "tsdx build",
-    "test": "tsdx test --passWithNoTests",
+    "test": "tsdx test --watch",
     "lint": "tsdx lint",
     "prepare": "tsdx build",
     "size": "size-limit",
@@ -48,10 +48,13 @@
   ],
   "devDependencies": {
     "@rollup/plugin-image": "^3.0.2",
+    "@types/react-test-renderer": "^18.0.0",
     "@size-limit/preset-small-lib": "^8.2.6",
     "@types/react": "^18.2.14",
     "@types/react-dom": "^18.2.6",
+    "css-loader": "^6.8.1",
     "husky": "^8.0.3",
+    "identity-obj-proxy": "^3.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "rollup-plugin-postcss": "^4.0.2",
@@ -59,5 +62,21 @@
     "tsdx": "^0.14.1",
     "tslib": "^2.6.0",
     "typescript": "^3.9.10"
+  },
+  "repository": {
+    "url": "https://github.com/juancamontero/jcm-product-card",
+    "type": "git"
+  },
+  "keywords": [
+    "product",
+    "card",
+    "react"
+  ],
+  "dependencies": {
+    "@babel/preset-env": "^7.22.7",
+    "@babel/preset-react": "^7.22.5",
+    "babel-jest": "^29.6.1",
+    "jest": "^25.5.4",
+    "react-test-renderer": "^18.2.0"
   }
 }

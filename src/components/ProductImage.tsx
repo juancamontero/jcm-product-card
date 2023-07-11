@@ -14,7 +14,7 @@ export const ProductImage = ({ img, className, style }: Props) => {
   const imgSrc = img ? img : useContext(ProductContext).product.img;
   const altText = !imgSrc
     ? 'no image icon'
-    : useContext(ProductContext).product.title;
+    : 'Product image'
 
   return (
     <img

@@ -1,12 +1,42 @@
 import 'react-app-polyfill/ie11';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { Thing } from '../.';
+import { ProductCard } from '../src/components/ProductCard';
+import { ProductButtons, ProductImage, ProductTitle } from '../src/components/';
+
+const product = {
+  id: 'CFG-MGU',
+  title: 'Coffee Mug - Code card',
+};
 
 const App = () => {
   return (
     <div>
-      <Thing />
+      <h1>Shopping Page</h1>
+      <hr />
+      <div
+        style={{
+          display: 'flex',
+          flexDirection: 'row',
+          flexWrap: 'wrap',
+        }}
+      >
+        <ProductCard
+          product={product}
+          initialValues={{
+            count: 4,
+            maxCount: 10,
+          }}
+        >
+          {({ reset, count, isMaxReached, onIncreaseBy, maxCount }) => (
+            <>
+              <ProductImage />
+              <ProductTitle />
+              <ProductButtons />
+            </>
+          )}
+        </ProductCard>
+      </div>
     </div>
   );
 };
